@@ -1,0 +1,1094 @@
+[
+    {
+        "name": "",
+        "value": "Válasszon!"
+    },
+    {
+        "name": "abarth",
+        "value": "ABARTH"
+    },
+    {
+        "name": "ac",
+        "value": "AC"
+    },
+    {
+        "name": "acura",
+        "value": "ACURA"
+    },
+    {
+        "name": "adler",
+        "value": "ADLER"
+    },
+    {
+        "name": "aero",
+        "value": "AERO"
+    },
+    {
+        "name": "aixam",
+        "value": "AIXAM"
+    },
+    {
+        "name": "aleko",
+        "value": "ALEKO"
+    },
+    {
+        "name": "alfa-romeo",
+        "value": "ALFAROMEO"
+    },
+    {
+        "name": "alke",
+        "value": "ALKE"
+    },
+    {
+        "name": "all-cars",
+        "value": "ALL-CARS"
+    },
+    {
+        "name": "allard",
+        "value": "ALLARD"
+    },
+    {
+        "name": "alpina",
+        "value": "ALPINA"
+    },
+    {
+        "name": "alpine",
+        "value": "ALPINE"
+    },
+    {
+        "name": "amc",
+        "value": "AMC"
+    },
+    {
+        "name": "american-austin",
+        "value": "AMERICANAUSTIN"
+    },
+    {
+        "name": "american-bantam",
+        "value": "AMERICANBANTAM"
+    },
+    {
+        "name": "amphicar",
+        "value": "AMPHICAR"
+    },
+    {
+        "name": "anadol",
+        "value": "ANADOL"
+    },
+    {
+        "name": "anchi",
+        "value": "ANCHI"
+    },
+    {
+        "name": "anfini",
+        "value": "ANFINI"
+    },
+    {
+        "name": "ariel",
+        "value": "ARIEL"
+    },
+    {
+        "name": "aro",
+        "value": "ARO"
+    },
+    {
+        "name": "artega",
+        "value": "ARTEGA"
+    },
+    {
+        "name": "asia",
+        "value": "ASIA"
+    },
+    {
+        "name": "aston-martin",
+        "value": "ASTONMARTIN"
+    },
+    {
+        "name": "asuna",
+        "value": "ASÜNA"
+    },
+    {
+        "name": "auburn",
+        "value": "AUBURN"
+    },
+    {
+        "name": "audi",
+        "value": "AUDI"
+    },
+    {
+        "name": "austin-healey",
+        "value": "AUSTIN-HEALEY"
+    },
+    {
+        "name": "austin",
+        "value": "AUSTIN"
+    },
+    {
+        "name": "austin-morris",
+        "value": "AUSTINMORRIS"
+    },
+    {
+        "name": "auto-union",
+        "value": "AUTOUNION"
+    },
+    {
+        "name": "autobianchi",
+        "value": "AUTOBIANCHI"
+    },
+    {
+        "name": "automirage",
+        "value": "AUTOMIRAGE"
+    },
+    {
+        "name": "auverland",
+        "value": "AUVERLAND"
+    },
+    {
+        "name": "avanti",
+        "value": "AVANTI"
+    },
+    {
+        "name": "avions-voisin",
+        "value": "AVIONSVOISIN"
+    },
+    {
+        "name": "bajaj",
+        "value": "BAJAJ"
+    },
+    {
+        "name": "baoya",
+        "value": "BAOYA"
+    },
+    {
+        "name": "barkas",
+        "value": "BARKAS"
+    },
+    {
+        "name": "bedford",
+        "value": "BEDFORD"
+    },
+    {
+        "name": "bellier",
+        "value": "BELLIER"
+    },
+    {
+        "name": "bentley",
+        "value": "BENTLEY"
+    },
+    {
+        "name": "bertone",
+        "value": "BERTONE"
+    },
+    {
+        "name": "birdie",
+        "value": "BIRDIE"
+    },
+    {
+        "name": "bluecar",
+        "value": "BLUECAR"
+    },
+    {
+        "name": "bma",
+        "value": "BMA"
+    },
+    {
+        "name": "bmw",
+        "value": "BMW"
+    },
+    {
+        "name": "borgward",
+        "value": "BORGWARD"
+    },
+    {
+        "name": "brilliance-bmw",
+        "value": "BRILLIANCE(BMW)"
+    },
+    {
+        "name": "brilliance-jinbei",
+        "value": "BRILLIANCE(JINBEI)"
+    },
+    {
+        "name": "brilliance-zhonghua",
+        "value": "BRILLIANCE(ZHONGHUA)"
+    },
+    {
+        "name": "bugatti",
+        "value": "BUGATTI"
+    },
+    {
+        "name": "buick",
+        "value": "BUICK"
+    },
+    {
+        "name": "byd",
+        "value": "BYD"
+    },
+    {
+        "name": "cadillac",
+        "value": "CADILLAC"
+    },
+    {
+        "name": "casalini",
+        "value": "CASALINI"
+    },
+    {
+        "name": "caterham",
+        "value": "CATERHAM"
+    },
+    {
+        "name": "chatenet",
+        "value": "CHATENET"
+    },
+    {
+        "name": "checker",
+        "value": "CHECKER"
+    },
+    {
+        "name": "chery",
+        "value": "CHERY"
+    },
+    {
+        "name": "chevrolet",
+        "value": "CHEVROLET"
+    },
+    {
+        "name": "chrysler",
+        "value": "CHRYSLER"
+    },
+    {
+        "name": "citroen",
+        "value": "CITROEN"
+    },
+    {
+        "name": "cmc",
+        "value": "CMC"
+    },
+    {
+        "name": "cobra",
+        "value": "COBRA"
+    },
+    {
+        "name": "cupra",
+        "value": "CUPRA"
+    },
+    {
+        "name": "dacia",
+        "value": "DACIA"
+    },
+    {
+        "name": "daewoo",
+        "value": "DAEWOO"
+    },
+    {
+        "name": "daf",
+        "value": "DAF"
+    },
+    {
+        "name": "daihatsu",
+        "value": "DAIHATSU"
+    },
+    {
+        "name": "daimler",
+        "value": "DAIMLER"
+    },
+    {
+        "name": "datsun",
+        "value": "DATSUN"
+    },
+    {
+        "name": "de-lorean",
+        "value": "DELOREAN"
+    },
+    {
+        "name": "delta",
+        "value": "DELTA"
+    },
+    {
+        "name": "desoto",
+        "value": "DESOTO"
+    },
+    {
+        "name": "detomaso",
+        "value": "DETOMASO"
+    },
+    {
+        "name": "dkw",
+        "value": "DKW"
+    },
+    {
+        "name": "dodge",
+        "value": "DODGE"
+    },
+    {
+        "name": "donkervoort",
+        "value": "DONKERVOORT"
+    },
+    {
+        "name": "dr",
+        "value": "DR"
+    },
+    {
+        "name": "ds",
+        "value": "DS"
+    },
+    {
+        "name": "ducati-energia",
+        "value": "DUCATIENERGIA"
+    },
+    {
+        "name": "due",
+        "value": "DUE"
+    },
+    {
+        "name": "duesenberg",
+        "value": "DUESENBERG"
+    },
+    {
+        "name": "eagle",
+        "value": "EAGLE"
+    },
+    {
+        "name": "egyedi",
+        "value": "EGYEDI"
+    },
+    {
+        "name": "electroauto",
+        "value": "ELECTROAUTO"
+    },
+    {
+        "name": "erad",
+        "value": "ERAD"
+    },
+    {
+        "name": "essex",
+        "value": "ESSEX"
+    },
+    {
+        "name": "excalibur",
+        "value": "EXCALIBUR"
+    },
+    {
+        "name": "fargo",
+        "value": "FARGO"
+    },
+    {
+        "name": "ferrari",
+        "value": "FERRARI"
+    },
+    {
+        "name": "fiat",
+        "value": "FIAT"
+    },
+    {
+        "name": "fisker",
+        "value": "FISKER"
+    },
+    {
+        "name": "ford",
+        "value": "FORD"
+    },
+    {
+        "name": "foton",
+        "value": "FOTON"
+    },
+    {
+        "name": "fsm",
+        "value": "FSM"
+    },
+    {
+        "name": "fso",
+        "value": "FSO"
+    },
+    {
+        "name": "gac-gonow",
+        "value": "GACGONOW"
+    },
+    {
+        "name": "gaz",
+        "value": "GAZ"
+    },
+    {
+        "name": "gáspár-automobil",
+        "value": "GÁSPÁRAUTOMOBIL"
+    },
+    {
+        "name": "gem-car",
+        "value": "GEMCAR"
+    },
+    {
+        "name": "geo",
+        "value": "GEO"
+    },
+    {
+        "name": "glas",
+        "value": "GLAS"
+    },
+    {
+        "name": "gmc",
+        "value": "GMC"
+    },
+    {
+        "name": "goggomobil",
+        "value": "GOGGOMOBIL"
+    },
+    {
+        "name": "graf-carello",
+        "value": "GRAF-CARELLO"
+    },
+    {
+        "name": "graham",
+        "value": "GRAHAM"
+    },
+    {
+        "name": "great-wall",
+        "value": "GREATWALL"
+    },
+    {
+        "name": "grecav",
+        "value": "GRECAV"
+    },
+    {
+        "name": "hanomag",
+        "value": "HANOMAG"
+    },
+    {
+        "name": "hillman",
+        "value": "HILLMAN"
+    },
+    {
+        "name": "holden",
+        "value": "HOLDEN"
+    },
+    {
+        "name": "honda",
+        "value": "HONDA"
+    },
+    {
+        "name": "hudson",
+        "value": "HUDSON"
+    },
+    {
+        "name": "humber",
+        "value": "HUMBER"
+    },
+    {
+        "name": "hummer",
+        "value": "HUMMER"
+    },
+    {
+        "name": "hyundai",
+        "value": "HYUNDAI"
+    },
+    {
+        "name": "ifa",
+        "value": "IFA"
+    },
+    {
+        "name": "ikarus",
+        "value": "IKARUS"
+    },
+    {
+        "name": "infiniti",
+        "value": "INFINITI"
+    },
+    {
+        "name": "innocenti",
+        "value": "INNOCENTI"
+    },
+    {
+        "name": "intermotor",
+        "value": "INTERMOTOR"
+    },
+    {
+        "name": "international",
+        "value": "INTERNATIONAL"
+    },
+    {
+        "name": "isigo",
+        "value": "ISIGO"
+    },
+    {
+        "name": "isuzu",
+        "value": "ISUZU"
+    },
+    {
+        "name": "italcar",
+        "value": "ITALCAR"
+    },
+    {
+        "name": "iveco",
+        "value": "IVECO"
+    },
+    {
+        "name": "jaguar",
+        "value": "JAGUAR"
+    },
+    {
+        "name": "jdm",
+        "value": "JDM"
+    },
+    {
+        "name": "jeep",
+        "value": "JEEP"
+    },
+    {
+        "name": "jensen",
+        "value": "JENSEN"
+    },
+    {
+        "name": "jiangling",
+        "value": "JIANGLING"
+    },
+    {
+        "name": "kewet",
+        "value": "KEWET"
+    },
+    {
+        "name": "kia",
+        "value": "KIA"
+    },
+    {
+        "name": "koenigsegg",
+        "value": "KOENIGSEGG"
+    },
+    {
+        "name": "lada",
+        "value": "LADA"
+    },
+    {
+        "name": "lam",
+        "value": "LAM"
+    },
+    {
+        "name": "lamborghini",
+        "value": "LAMBORGHINI"
+    },
+    {
+        "name": "lancia",
+        "value": "LANCIA"
+    },
+    {
+        "name": "land-rover",
+        "value": "LANDROVER"
+    },
+    {
+        "name": "ldv",
+        "value": "LDV"
+    },
+    {
+        "name": "lea-francis",
+        "value": "LEA-FRANCIS"
+    },
+    {
+        "name": "levc",
+        "value": "LEVC"
+    },
+    {
+        "name": "lexus",
+        "value": "LEXUS"
+    },
+    {
+        "name": "ligier",
+        "value": "LIGIER"
+    },
+    {
+        "name": "lincoln",
+        "value": "LINCOLN"
+    },
+    {
+        "name": "lincoln",
+        "value": "LLOYD"
+    },
+    {
+        "name": "london",
+        "value": "LONDON"
+    },
+    {
+        "name": "lotus",
+        "value": "LOTUS"
+    },
+    {
+        "name": "lti",
+        "value": "LTI(CARBODIES)"
+    },
+    {
+        "name": "luaz",
+        "value": "LUAZ"
+    },
+    {
+        "name": "mahindra",
+        "value": "MAHINDRA"
+    },
+    {
+        "name": "man",
+        "value": "MAN"
+    },
+    {
+        "name": "marcos",
+        "value": "MARCOS"
+    },
+    {
+        "name": "maruti",
+        "value": "MARUTI"
+    },
+    {
+        "name": "maserati",
+        "value": "MASERATI"
+    },
+    {
+        "name": "matra",
+        "value": "MATRA"
+    },
+    {
+        "name": "maybach",
+        "value": "MAYBACH"
+    },
+    {
+        "name": "mazda",
+        "value": "MAZDA"
+    },
+    {
+        "name": "mclaren",
+        "value": "MCLAREN"
+    },
+    {
+        "name": "mega",
+        "value": "MEGA"
+    },
+    {
+        "name": "mercedes-amg",
+        "value": "MERCEDES-AMG"
+    },
+    {
+        "name": "mercedes-benz",
+        "value": "MERCEDES-BENZ"
+    },
+    {
+        "name": "mercedes-maybach",
+        "value": "MERCEDES-MAYBACH"
+    },
+    {
+        "name": "mercury",
+        "value": "MERCURY"
+    },
+    {
+        "name": "mev",
+        "value": "MEV"
+    },
+    {
+        "name": "mg",
+        "value": "MG"
+    },
+    {
+        "name": "mia-electric",
+        "value": "MIAELECTRIC"
+    },
+    {
+        "name": "microcar",
+        "value": "MICROCAR"
+    },
+    {
+        "name": "minauto",
+        "value": "MINAUTO"
+    },
+    {
+        "name": "mini-el",
+        "value": "MINI-EL"
+    },
+    {
+        "name": "mini",
+        "value": "MINI"
+    },
+    {
+        "name": "mitsubishi",
+        "value": "MITSUBISHI"
+    },
+    {
+        "name": "morgan",
+        "value": "MORGAN"
+    },
+    {
+        "name": "morris",
+        "value": "MORRIS"
+    },
+    {
+        "name": "moszkvics",
+        "value": "MOSZKVICS"
+    },
+    {
+        "name": "nash",
+        "value": "NASH"
+    },
+    {
+        "name": "nissan",
+        "value": "NISSAN"
+    },
+    {
+        "name": "nsu",
+        "value": "NSU"
+    },
+    {
+        "name": "nysa",
+        "value": "NYSA"
+    },
+    {
+        "name": "oka",
+        "value": "OKA"
+    },
+    {
+        "name": "oldsmobile",
+        "value": "OLDSMOBILE"
+    },
+    {
+        "name": "oltcit",
+        "value": "OLTCIT"
+    },
+    {
+        "name": "opel",
+        "value": "OPEL"
+    },
+    {
+        "name": "otosan",
+        "value": "OTOSAN"
+    },
+    {
+        "name": "packard",
+        "value": "PACKARD"
+    },
+    {
+        "name": "pagani",
+        "value": "PAGANI"
+    },
+    {
+        "name": "panhard",
+        "value": "PANHARD"
+    },
+    {
+        "name": "panther",
+        "value": "PANTHER"
+    },
+    {
+        "name": "peugeot",
+        "value": "PEUGEOT"
+    },
+    {
+        "name": "pgo",
+        "value": "PGO"
+    },
+    {
+        "name": "piaggio",
+        "value": "PIAGGIO"
+    },
+    {
+        "name": "plymouth",
+        "value": "PLYMOUTH"
+    },
+    {
+        "name": "polaris",
+        "value": "POLARIS"
+    },
+    {
+        "name": "polonez",
+        "value": "POLONEZ"
+    },
+    {
+        "name": "polski-fiat",
+        "value": "POLSKIFIAT"
+    },
+    {
+        "name": "pontiac",
+        "value": "PONTIAC"
+    },
+    {
+        "name": "porsche",
+        "value": "PORSCHE"
+    },
+    {
+        "name": "praga",
+        "value": "PRAGA"
+    },
+    {
+        "name": "premier",
+        "value": "PREMIER"
+    },
+    {
+        "name": "proton",
+        "value": "PROTON"
+    },
+    {
+        "name": "puch",
+        "value": "PUCH"
+    },
+    {
+        "name": "puli",
+        "value": "PULI"
+    },
+    {
+        "name": "rambler",
+        "value": "RAMBLER"
+    },
+    {
+        "name": "raytonfissore",
+        "value": "RAYTONFISSORE"
+    },
+    {
+        "name": "reliant",
+        "value": "RELIANT"
+    },
+    {
+        "name": "renault",
+        "value": "RENAULT"
+    },
+    {
+        "name": "reo",
+        "value": "REO"
+    },
+    {
+        "name": "replika",
+        "value": "REPLIKA"
+    },
+    {
+        "name": "reva",
+        "value": "REVA"
+    },
+    {
+        "name": "riley",
+        "value": "RILEY"
+    },
+    {
+        "name": "roewe",
+        "value": "ROEWE"
+    },
+    {
+        "name": "rolls-royce",
+        "value": "ROLLS-ROYCE"
+    },
+    {
+        "name": "rover",
+        "value": "ROVER"
+    },
+    {
+        "name": "saab",
+        "value": "SAAB"
+    },
+    {
+        "name": "saleen",
+        "value": "SALEEN"
+    },
+    {
+        "name": "santana",
+        "value": "SANTANA"
+    },
+    {
+        "name": "saturn",
+        "value": "SATURN"
+    },
+    {
+        "name": "scion",
+        "value": "SCION"
+    },
+    {
+        "name": "seat",
+        "value": "SEAT"
+    },
+    {
+        "name": "shuanghuan",
+        "value": "SHUANGHUAN"
+    },
+    {
+        "name": "simca",
+        "value": "SIMCA"
+    },
+    {
+        "name": "skoda",
+        "value": "SKODA"
+    },
+    {
+        "name": "smart",
+        "value": "SMART"
+    },
+    {
+        "name": "spartan",
+        "value": "SPARTAN"
+    },
+    {
+        "name": "spyker",
+        "value": "SPYKER"
+    },
+    {
+        "name": "ssangyong",
+        "value": "SSANGYONG"
+    },
+    {
+        "name": "steyr-puch",
+        "value": "STEYRPUCH"
+    },
+    {
+        "name": "studebaker",
+        "value": "STUDEBAKER"
+    },
+    {
+        "name": "subaru",
+        "value": "SUBARU"
+    },
+    {
+        "name": "sunbeam",
+        "value": "SUNBEAM"
+    },
+    {
+        "name": "suzuki",
+        "value": "SUZUKI"
+    },
+    {
+        "name": "talbot",
+        "value": "TALBOT"
+    },
+    {
+        "name": "tasso",
+        "value": "TASSO"
+    },
+    {
+        "name": "tata",
+        "value": "TATA"
+    },
+    {
+        "name": "tatra",
+        "value": "TATRA"
+    },
+    {
+        "name": "tavria",
+        "value": "TAVRIA"
+    },
+    {
+        "name": "tazzari",
+        "value": "TAZZARI"
+    },
+    {
+        "name": "tesla",
+        "value": "TESLA"
+    },
+    {
+        "name": "think",
+        "value": "THINK"
+    },
+    {
+        "name": "toyota",
+        "value": "TOYOTA"
+    },
+    {
+        "name": "trabant",
+        "value": "TRABANT"
+    },
+    {
+        "name": "triumph",
+        "value": "TRIUMPH"
+    },
+    {
+        "name": "tvr",
+        "value": "TVR"
+    },
+    {
+        "name": "uaz",
+        "value": "UAZ"
+    },
+    {
+        "name": "umm",
+        "value": "UMM"
+    },
+    {
+        "name": "vauxhall",
+        "value": "VAUXHALL"
+    },
+    {
+        "name": "velorex",
+        "value": "VELOREX"
+    },
+    {
+        "name": "venturi",
+        "value": "VENTURI"
+    },
+    {
+        "name": "versenyauto",
+        "value": "VERSENYAUTÓ"
+    },
+    {
+        "name": "vespa",
+        "value": "VESPA"
+    },
+    {
+        "name": "volga",
+        "value": "VOLGA"
+    },
+    {
+        "name": "volkswagen",
+        "value": "VOLKSWAGEN"
+    },
+    {
+        "name": "volvo",
+        "value": "VOLVO"
+    },
+    {
+        "name": "w-motors",
+        "value": "WMOTORS"
+    },
+    {
+        "name": "waaijenberg",
+        "value": "WAAIJENBERG"
+    },
+    {
+        "name": "wanderer",
+        "value": "WANDERER"
+    },
+    {
+        "name": "warszawa",
+        "value": "WARSZAWA"
+    },
+    {
+        "name": "wartburg",
+        "value": "WARTBURG"
+    },
+    {
+        "name": "wheego",
+        "value": "WHEEGO"
+    },
+    {
+        "name": "wiesmann",
+        "value": "WIESMANN"
+    },
+    {
+        "name": "wolseley",
+        "value": "WOLSELEY"
+    },
+    {
+        "name": "yes",
+        "value": "YES"
+    },
+    {
+        "name": "yugo",
+        "value": "YUGO"
+    },
+    {
+        "name": "zaporozsec",
+        "value": "ZAPOROZSEC"
+    },
+    {
+        "name": "zastava",
+        "value": "ZASTAVA"
+    },
+    {
+        "name": "zaz",
+        "value": "ZAZ"
+    },
+    {
+        "name": "zhidou",
+        "value": "ZHIDOU"
+    },
+    {
+        "name": "zil",
+        "value": "ZIL"
+    },
+    {
+        "name": "zisz",
+        "value": "ZISZ"
+    }
+]

@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="utf-8">
+    <title>Hírdetés feltöltése</title>
+    <link type="text/css" rel="stylesheet" href="/style.css">
+</head>
+<header>
+    <%- include("./partials/navbar.ejs", { loggedInUserName: loggedInUserName }) %>
+</header>
+
+<body>
+    <h1>Hírdetés feltöltése</h1>
+    <article class="flexbox">
+        <form method="post" action="/routes/listings">
+            <p>
+                <% if (carMakeData) { %>
+                <label name="makeLabel" id="makeLabel">Autó márkája:</label>
+                <select name="make" id="make" required>
+                    <% carMakeData.forEach(d => { %>
+                    <option name=" <%= d.name %> "> <%= d.value %> </option>
+                    <% }) %>
+                </select>
+                <% } %>
+            </p>
+            <p>
+                <label name="modelLabel" id="modelLabel">Modell: </label>
+                <input type="text" name="model" id="model" required />
+            </p>
+            <p>
+                <label name="fuelLabel" id="fuelLabel">Üzemanyag: </label>
+                <select name="fuel" id="fuel" required>
+                    <option value="">Válasszon!</option>
+                    <option value="benzin">Benzin</option>
+                    <option value="dizel">Dízel</option>
+                    <option value="hibrid">Hibrid</option>
+                    <option value="benzin-elektromos">&nbsp;&nbsp;Benzin/elektromos</option>
+                    <option value="dizel-elektromos">&nbsp;&nbsp;Dízel/elektromos</option>
+                    <option value="benzin-gaz">Benzin/Gáz</option>
+                    <option value="LPG-benzin">&nbsp;&nbsp;LPG/benzin</option>
+                    <option value="CNG-benzin">&nbsp;&nbsp;CNG/benzin</option>
+                    <option value="dizel-gaz">Dízel/Gáz</option>
+                    <option value="LPG-dizel">&nbsp;&nbsp;LPG/dízel</option>
+                    <option value="CNG-dizel">&nbsp;&nbsp;CNG/dízel</option>
+                    <option value="elektromos">Elektromos</option>
+                    <option value="etanol">Etanol</option>
+                    <option value="biodizel">Biodízel</option>
+                    <option value="hidrogen-elektromos">Hidrogén/elektromos</option>
+                </select>
+            </p>
+            <p>
+                <label name="shifterLabel" id="shifterLabel">Sebessegváltó fajtája: </label>
+                <select name="shifter" id="shifter" required>
+                    <option value="">Válasszon!</option>
+                    <option value="A0">automata sebességváltó</option>
+                    <option value="A3">&nbsp;&nbsp;automata (3 fokozatú) sebességváltó</option>
+                    <option value="A4">&nbsp;&nbsp;automata (4 fokozatú) sebességváltó</option>
+                    <option value="A5">&nbsp;&nbsp;automata (5 fokozatú) sebességváltó</option>
+                    <option value="A6">&nbsp;&nbsp;automata (6 fokozatú) sebességváltó</option>
+                    <option value="A7">&nbsp;&nbsp;automata (7 fokozatú) sebességváltó</option>
+                    <option value="A8">&nbsp;&nbsp;automata (8 fokozatú) sebességváltó</option>
+                    <option value="A9">&nbsp;&nbsp;automata (9 fokozatú) sebességváltó</option>
+                    <option value="A10">&nbsp;&nbsp;automata (10 fokozatú) sebességváltó</option>
+                    <option value="F0">félautomata sebességváltó</option>
+                    <option value="V0">fokozatmentes automata sebességváltó</option>
+                    <option value="M0">manuális sebességváltó</option>
+                    <option value="M3">&nbsp;&nbsp;manuális (3 fokozatú) sebességváltó</option>
+                    <option value="M4">&nbsp;&nbsp;manuális (4 fokozatú) sebességváltó</option>
+                    <option value="M5">&nbsp;&nbsp;manuális (5 fokozatú) sebességváltó</option>
+                    <option value="M6">&nbsp;&nbsp;manuális (6 fokozatú) sebességváltó</option>
+                    <option value="M7">&nbsp;&nbsp;manuális (7 fokozatú) sebességváltó</option>
+                    <option value="S0">szekvenciális sebességváltó</option>
+                    <option value="S4">&nbsp;&nbsp;szekvenciális (4 fokozatú) sebességváltó
+                    </option>
+                    <option value="S5">&nbsp;&nbsp;szekvenciális (5 fokozatú) sebességváltó
+                    </option>
+                    <option value="S6">&nbsp;&nbsp;szekvenciális (6 fokozatú) sebességváltó
+                    </option>
+                    <option value="S7">&nbsp;&nbsp;szekvenciális (7 fokozatú) sebességváltó
+                    </option>
+                    <option value="S8">&nbsp;&nbsp;szekvenciális (8 fokozatú) sebességváltó
+                    </option>
+                    <option value="T0">tiptronic sebességváltó</option>
+                    <option value="T4">&nbsp;&nbsp;automata (4 fokozatú tiptronic) sebességváltó
+                    </option>
+                    <option value="T5">&nbsp;&nbsp;automata (5 fokozatú tiptronic) sebességváltó
+                    </option>
+                    <option value="T6">&nbsp;&nbsp;automata (6 fokozatú tiptronic) sebességváltó
+                    </option>
+                    <option value="T7">&nbsp;&nbsp;automata (7 fokozatú tiptronic) sebességváltó
+                    </option>
+                    <option value="T8">&nbsp;&nbsp;automata (8 fokozatú tiptronic) sebességváltó
+                    </option>
+                    <option value="T9">&nbsp;&nbsp;automata (9 fokozatú tiptronic) sebességváltó
+                    </option>
+                </select>
+            </p>
+            <p>
+                <label name="powerLabel" id="powerLabel">Hengerűrtartalom: </label>
+                <input type="text" name="power" id="power" required />&nbsp;cm³
+            </p>
+            <p>
+                <label name="manufactDateLabel" id="manufactDateLabel">Gyártási dátum: </label>
+                <input type="date" name="manufactDate" id="manufactDate" required />
+            </p>
+            <p>
+                <label name="milesLabel" id="milesLabel">Kilométeróra állása: </label>
+                <input type="text" name="miles" id="miles" value="" required>&nbsp;km
+            </p>
+            <p>
+                <label name="typeLabel" id="typeLabel">Kivitel: </label>
+                <select name="type" id="type" required>
+                    <option value="">Válasszon!</option>
+                    <option value="pickup">Pickup</option>
+                    <option value="terepjaro">Terepjáró</option>
+                    <option value="buggy">Buggy</option>
+                    <option value="cabrio">Cabrio</option>
+                    <option value="coupe">Coupe</option>
+                    <option value="egyteru">Egyterű</option>
+                    <option value="ferdehatu">Ferdehátú</option>
+                    <option value="hot-rod">Hot rod</option>
+                    <option value="kisbusz">Kisbusz</option>
+                    <option value="kombi">Kombi</option>
+                    <option value="lepcsoshatu">Lépcsőshátú</option>
+                    <option value="mopedauto">Mopedautó</option>
+                    <option value="sedan">Sedan</option>
+                    <option value="sport">Sport</option>
+                    <option value="crossover">Városi terepjáró (crossover)</option>
+                </select>
+            </p>
+            <p>
+                <label name="doorNrLabel" id="doorNrLabel">Ajtók száma: </label>
+                <select name="doorNr" id="doorNr" required>
+                    <option value="">---</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+            </p>
+            <p>
+                <label name="colorLabel" id="colorLabel">Autó színe: </label>
+                <select name="color" id="color" required>
+                    <option value="">Válasszon!</option>
+                    <option value="barna">barna</option>
+                    <option value="sotetbarna">&nbsp;&nbsp;sötétbarna</option>
+                    <option value="vilagosbarna">&nbsp;&nbsp;világosbarna</option>
+                    <option value="bezs">bézs</option>
+                    <option value="biborvoros">bíborvörös</option>
+                    <option value="bordo">bordó</option>
+                    <option value="ezust">ezüst</option>
+                    <option value="feher">fehér</option>
+                    <option value="tortfeher">&nbsp;&nbsp;törtfehér</option>
+                    <option value="fekete">fekete</option>
+                    <option value="homok">homok</option>
+                    <option value="ibolya">ibolya</option>
+                    <option value="kek">kék</option>
+                    <option value="ibolyakek">&nbsp;&nbsp;ibolyakék</option>
+                    <option value="oceankek">&nbsp;&nbsp;óceánkék</option>
+                    <option value="sotetkek">&nbsp;&nbsp;sötétkék</option>
+                    <option value="vilagoskek">&nbsp;&nbsp;világoskék</option>
+                    <option value="lila">lila</option>
+                    <option value="narancs">narancs</option>
+                    <option value="okker">okker</option>
+                    <option value="pezsgo">pezsgő</option>
+                    <option value="piros">piros</option>
+                    <option value="rozsaszin">rózsaszín</option>
+                    <option value="sarga">sárga</option>
+                    <option value="aranysarga">&nbsp;&nbsp;aranysárga</option>
+                    <option value="citromsarga">&nbsp;&nbsp;citromsárga</option>
+                    <option value="narancssarga">&nbsp;&nbsp;narancssárga</option>
+                    <option value="szurke">szürke</option>
+                    <option value="sotetszurke">&nbsp;&nbsp;sötétszürke</option>
+                    <option value="vilagosszurke">&nbsp;&nbsp;világosszürke</option>
+                    <option value="terep">terep</option>
+                    <option value="turkiz">türkiz</option>
+                    <option value="vajszinu">vajszínű</option>
+                    <option value="zold">zöld</option>
+                    <option value="olajzold">&nbsp;&nbsp;olajzöld</option>
+                    <option value="sotetzold">&nbsp;&nbsp;sötétzöld</option>
+                    <option value="vilagoszold">&nbsp;&nbsp;világoszöld</option>
+                </select></p>
+            <p>
+                <label name="cityLabel" id="cityLabel">Város: </label>
+                <input type="text" name="city" id="city" value="" required>
+            </p>
+            <p>
+                <label name="priceLabel" id="priceLabel">Az autó ára:</label>
+                <input type="text" name="price" id="price" value="" required>&nbsp;&euro;
+            </p>
+            <p>
+                <label name="uploadTimeLabel" id="uploadTimeLabel">Feltöltés dátuma: </label>
+                <input type="date" name="uploadTime" id="uploadTime" required>
+            </p>
+            <p><input type="submit" id="submitBtn" value="Leadom" /></p>
+        </form>
+    </article>
+    <footer>
+        Készítette &copy; Ferent Edina feim1316 info+
+    </footer>
+</body>
+
+</html>

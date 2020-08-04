@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<!-- Készítsünk egy formot, amellyel egy felhasználó képeket tölthet fel egy hirdetéshez, az egyedi ID-ját
+alkalmazva. Ha megadott ID-jú hirdetés nem létezik, adjunk megfelelő hibaüzenetet..-->
+
+<head>
+    <meta charset="utf-8">
+    <title>Kép feltöltése</title>
+    <link type="text/css" rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>Kép feltöltése</h1>
+    <article class="flexbox">
+        <form method="post" enctype="multipart/form-data" action="/feltoltes">
+            <p>
+                <label name="listingIdLabel" id="listingIdLabel">Adja meg a bejegyzés ID-ját:</label>
+                <input type="number" name="listingId" id="listingId" required>
+            </p>
+            <p>
+                <label name="imgLabel" id="imgLabel">Válassza ki a képeket:</label>
+                <input type="file" id="img" name="img" accept="image/*" required>
+            </p>
+            <p><input type="submit" value="Feltöltöm" /></p>
+        </form>
+    </article>
+    <footer>
+        Készítette &copy; Ferent Edina feim1316 info+
+    </footer>
+</body>
+
+</html>

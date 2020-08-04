@@ -1,0 +1,27 @@
+INSERT INTO `autokereskedes`.`users`
+(
+`fullname`,
+`email`,
+`birthdate`,
+`role`,
+`passwordWithSalt`,
+`createdAt`,
+`updatedAt`)
+VALUES
+(
+"admin",
+"admin",
+"1999.01.01",
+"admin",
+"356dbf54fcd696f683671a1bd2ba5fa17711b5ec141256cfe7374a0dbf84317413031fd586c9678e0abf4e1a708b7745",
+NOW(),
+NOW()),
+(
+"user",
+"user",
+"1990.01.01",
+"user",
+"abf843e22c6f2159bfa2b10d051ad48c6dcc27fc9a67848a2ba96c648b81ae07553ef1d0c6c6931c8dbde87718b5b1b8",
+NOW(),
+NOW()
+);

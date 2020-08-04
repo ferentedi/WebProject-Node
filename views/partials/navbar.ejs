@@ -1,0 +1,12 @@
+<nav>
+    <div class="logout">
+        <% if (loggedInUserName) { %>
+            <p>Hello, <%= loggedInUserName %></p>
+            <% } else { %>
+            <p>none</p>
+            <% } %>
+        <form action="/routes/logout" method="post">
+            <input type="submit" name="logout-submit" value="Logout">
+        </form>
+    </div>
+</nav>

@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<!-- Készítsünk egy formot, amellyel felhasználók használt autókat tölthetnek fel a rendszerbe. Egy
+hirdetés tartalmazza az autó márkáját, városát, árát, feltöltés dátumát, stb. A hívás térítsen vissza
+egy generált egyedi ID-t, amellyel utólag visszakereshető a bejegyzés.-->
+
+<head>
+    <meta charset="utf-8">
+    <title>Hírdetés feltöltése</title>
+    <link type="text/css" rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>Hírdetés feltöltése</h1>
+    <article class="flexbox">
+        <form method="post" action="/">
+            <p>
+                <label name="makeLabel" id="makeLabel">Autó márkája: </label>
+                <select name="make" id="make" required>
+                    <option value="">Válasszon!</option>
+                    <option value="abarth">ABARTH</option>
+                    <option value="ac">AC</option>
+                    <option value="acura">ACURA</option>
+                    <option value="adler">ADLER</option>
+                    <option value="aero">AERO</option>
+                    <option value="aixam">AIXAM</option>
+                    <option value="aleko">ALEKO</option>
+                    <option value="alfa-romeo">ALFA ROMEO</option>
+                    <option value="alke">ALKE</option>
+                    <option value="all-cars">ALL-CARS</option>
+                    <option value="allard">ALLARD</option>
+                    <option value="alpina">ALPINA</option>
+                    <option value="alpine">ALPINE</option>
+                    <option value="amc">AMC</option>
+                    <option value="american-austin">AMERICAN AUSTIN</option>
+                    <option value="american-bantam">AMERICAN BANTAM</option>
+                    <option value="amphicar">AMPHICAR</option>
+                    <option value="anadol">ANADOL</option>
+                    <option value="anchi">ANCHI</option>
+                    <option value="anfini">ANFINI</option>
+                    <option value="ariel">ARIEL</option>
+                    <option value="aro">ARO</option>
+                    <option value="artega">ARTEGA</option>
+                    <option value="asia">ASIA</option>
+                    <option value="aston-martin">ASTON MARTIN</option>
+                    <option value="asuna">ASÜNA</option>
+                    <option value="auburn">AUBURN</option>
+                    <option value="audi">AUDI</option>
+                    <option value="austin-healey">AUSTIN-HEALEY</option>
+                    <option value="austin">AUSTIN</option>
+                    <option value="austin-morris">AUSTIN MORRIS</option>
+                    <option value="auto-union">AUTO UNION</option>
+                    <option value="autobianchi">AUTOBIANCHI</option>
+                    <option value="automirage">AUTOMIRAGE</option>
+                    <option value="auverland">AUVERLAND</option>
+                    <option value="avanti">AVANTI</option>
+                    <option value="avions-voisin">AVIONS VOISIN</option>
+                    <option value="bajaj">BAJAJ</option>
+                    <option value="baoya">BAOYA</option>
+                    <option value="barkas">BARKAS</option>
+                    <option value="bedford">BEDFORD</option>
+                    <option value="bellier">BELLIER</option>
+                    <option value="bentley">BENTLEY</option>
+                    <option value="bertone">BERTONE</option>
+                    <option value="birdie">BIRDIE</option>
+                    <option value="bluecar">BLUECAR</option>
+                    <option value="bma">BMA</option>
+                    <option value="bmw">BMW</option>
+                    <option value="borgward">BORGWARD</option>
+                    <option value="brilliance-bmw">BRILLIANCE (BMW)</option>
+                    <option value="brilliance-jinbei">BRILLIANCE (JINBEI)</option>
+                    <option value="brilliance-zhonghua">BRILLIANCE (ZHONGHUA)</option>
+                    <option value="bugatti">BUGATTI</option>
+                    <option value="buick">BUICK</option>
+                    <option value="byd">BYD</option>
+                    <option value="cadillac">CADILLAC</option>
+                    <option value="casalini">CASALINI</option>
+                    <option value="caterham">CATERHAM</option>
+                    <option value="chatenet">CHATENET</option>
+                    <option value="checker">CHECKER</option>
+                    <option value="chery">CHERY</option>
+                    <option value="chevrolet">CHEVROLET</option>
+                    <option value="chrysler">CHRYSLER</option>
+                    <option value="citroen">CITROEN</option>
+                    <option value="cmc">CMC</option>
+                    <option value="cobra">COBRA</option>
+                    <option value="cupra">CUPRA</option>
+                    <option value="dacia">DACIA</option>
+                    <option value="daewoo">DAEWOO</option>
+                    <option value="daf">DAF</option>
+                    <option value="daihatsu">DAIHATSU</option>
+                    <option value="daimler">DAIMLER</option>
+                    <option value="datsun">DATSUN</option>
+                    <option value="de-lorean">DE LOREAN</option>
+                    <option value="delta">DELTA</option>
+                    <option value="desoto">DESOTO</option>
+                    <option value="detomaso">DETOMASO</option>
+                    <option value="dkw">DKW</option>
+                    <option value="dodge">DODGE</option>
+                    <option value="donkervoort">DONKERVOORT</option>
+                    <option value="dr">DR</option>
+                    <option value="ds">DS</option>
+                    <option value="ducati-energia">DUCATI ENERGIA</option>
+                    <option value="due">DUE</option>
+                    <option value="duesenberg">DUESENBERG</option>
+                    <option value="eagle">EAGLE</option>
+                    <option value="egyedi">EGYEDI</option>
+                    <option value="electroauto">ELECTROAUTO</option>
+                    <option value="erad">ERAD</option>
+                    <option value="essex">ESSEX</option>
+                    <option value="excalibur">EXCALIBUR</option>
+                    <option value="fargo">FARGO</option>
+                    <option value="ferrari">FERRARI</option>
+                    <option value="fiat">FIAT</option>
+                    <option value="fisker">FISKER</option>
+                    <option value="ford">FORD</option>
+                    <option value="foton">FOTON</option>
+                    <option value="fsm">FSM</option>
+                    <option value="fso">FSO</option>
+                    <option value="gac-gonow">GAC GONOW</option>
+                    <option value="gaz">GAZ</option>
+                    <option value="gaspar-automobil">GÁSPÁR AUTOMOBIL</option>
+                    <option value="gem-car">GEM CAR</option>
+                    <option value="geo">GEO</option>
+                    <option value="glas">GLAS</option>
+                    <option value="gmc">GMC</option>
+                    <option value="goggomobil">GOGGOMOBIL</option>
+                    <option value="graf-carello">GRAF-CARELLO</option>
+                    <option value="graham">GRAHAM</option>
+                    <option value="great-wall">GREAT WALL</option>
+                    <option value="grecav">GRECAV</option>
+                    <option value="hanomag">HANOMAG</option>
+                    <option value="hillman">HILLMAN</option>
+                    <option value="holden">HOLDEN</option>
+                    <option value="honda">HONDA</option>
+                    <option value="hudson">HUDSON</option>
+                    <option value="humber">HUMBER</option>
+                    <option value="hummer">HUMMER</option>
+                    <option value="hyundai">HYUNDAI</option>
+                    <option value="ifa">IFA</option>
+                    <option value="ikarus">IKARUS</option>
+                    <option value="infiniti">INFINITI</option>
+                    <option value="innocenti">INNOCENTI</option>
+                    <option value="intermotor">INTERMOTOR</option>
+                    <option value="international">INTERNATIONAL</option>
+                    <option value="isigo">ISIGO</option>
+                    <option value="isuzu">ISUZU</option>
+                    <option value="italcar">ITALCAR</option>
+                    <option value="iveco">IVECO</option>
+                    <option value="jaguar">JAGUAR</option>
+                    <option value="jdm">JDM</option>
+                    <option value="jeep">JEEP</option>
+                    <option value="jensen">JENSEN</option>
+                    <option value="jiangling">JIANGLING</option>
+                    <option value="kewet">KEWET</option>
+                    <option value="kia">KIA</option>
+                    <option value="koenigsegg">KOENIGSEGG</option>
+                    <option value="lada">LADA</option>
+                    <option value="lam">LAM</option>
+                    <option value="lamborghini">LAMBORGHINI</option>
+                    <option value="lancia">LANCIA</option>
+                    <option value="land-rover">LAND ROVER</option>
+                    <option value="ldv">LDV</option>
+                    <option value="lea-francis">LEA-FRANCIS</option>
+                    <option value="levc">LEVC</option>
+                    <option value="lexus">LEXUS</option>
+                    <option value="ligier">LIGIER</option>
+                    <option value="lincoln">LINCOLN</option>
+                    <option value="lincoln">LLOYD</option>
+                    <option value="london">LONDON</option>
+                    <option value="lotus">LOTUS</option>
+                    <option value="lti">LTI (CARBODIES)</option>
+                    <option value="luaz">LUAZ</option>
+                    <option value="mahindra">MAHINDRA</option>
+                    <option value="man">MAN</option>
+                    <option value="marcos">MARCOS</option>
+                    <option value="maruti">MARUTI</option>
+                    <option value="maserati">MASERATI</option>
+                    <option value="matra">MATRA</option>
+                    <option value="maybach">MAYBACH</option>
+                    <option value="mazda">MAZDA</option>
+                    <option value="mclaren">MCLAREN</option>
+                    <option value="mega">MEGA</option>
+                    <option value="mercedes-amg">MERCEDES-AMG</option>
+                    <option value="mercedes-benz">MERCEDES-BENZ</option>
+                    <option value="mercedes-maybach">MERCEDES-MAYBACH</option>
+                    <option value="mercury">MERCURY</option>
+                    <option value="mev">MEV</option>
+                    <option value="mg">MG</option>
+                    <option value="mia-electric">MIA ELECTRIC</option>
+                    <option value="microcar">MICROCAR</option>
+                    <option value="minauto">MINAUTO</option>
+                    <option value="mini-el">MINI-EL</option>
+                    <option value="mini">MINI</option>
+                    <option value="mitsubishi">MITSUBISHI</option>
+                    <option value="morgan">MORGAN</option>
+                    <option value="morris">MORRIS</option>
+                    <option value="moszkvics">MOSZKVICS</option>
+                    <option value="nash">NASH</option>
+                    <option value="nissan">NISSAN</option>
+                    <option value="nsu">NSU</option>
+                    <option value="nysa">NYSA</option>
+                    <option value="oka">OKA</option>
+                    <option value="oldsmobile">OLDSMOBILE</option>
+                    <option value="oltcit">OLTCIT</option>
+                    <option value="opel">OPEL</option>
+                    <option value="otosan">OTOSAN</option>
+                    <option value="packard">PACKARD</option>
+                    <option value="pagani">PAGANI</option>
+                    <option value="panhard">PANHARD</option>
+                    <option value="panther">PANTHER</option>
+                    <option value="peugeot">PEUGEOT</option>
+                    <option value="pgo">PGO</option>
+                    <option value="piaggio">PIAGGIO</option>
+                    <option value="plymouth">PLYMOUTH</option>
+                    <option value="polaris">POLARIS</option>
+                    <option value="polonez">POLONEZ</option>
+                    <option value="polski-fiat">POLSKI FIAT</option>
+                    <option value="pontiac">PONTIAC</option>
+                    <option value="porsche">PORSCHE</option>
+                    <option value="praga">PRAGA</option>
+                    <option value="premier">PREMIER</option>
+                    <option value="proton">PROTON</option>
+                    <option value="puch">PUCH</option>
+                    <option value="puli">PULI</option>
+                    <option value="rambler">RAMBLER</option>
+                    <option value="rayton fissore">RAYTON FISSORE</option>
+                    <option value="reliant">RELIANT</option>
+                    <option value="renault">RENAULT</option>
+                    <option value="reo">REO</option>
+                    <option value="replika">REPLIKA</option>
+                    <option value="reva">REVA</option>
+                    <option value="riley">RILEY</option>
+                    <option value="roewe">ROEWE</option>
+                    <option value="rolls-royce">ROLLS-ROYCE</option>
+                    <option value="rover">ROVER</option>
+                    <option value="saab">SAAB</option>
+                    <option value="saleen">SALEEN</option>
+                    <option value="santana">SANTANA</option>
+                    <option value="saturn">SATURN</option>
+                    <option value="scion">SCION</option>
+                    <option value="seat">SEAT</option>
+                    <option value="shuanghuan">SHUANGHUAN</option>
+                    <option value="simca">SIMCA</option>
+                    <option value="skoda">SKODA</option>
+                    <option value="smart">SMART</option>
+                    <option value="spartan">SPARTAN</option>
+                    <option value="spyker">SPYKER</option>
+                    <option value="ssangyong">SSANGYONG</option>
+                    <option value="steyr-puch">STEYR PUCH</option>
+                    <option value="studebaker">STUDEBAKER</option>
+                    <option value="subaru">SUBARU</option>
+                    <option value="sunbeam">SUNBEAM</option>
+                    <option value="suzuki">SUZUKI</option>
+                    <option value="talbot">TALBOT</option>
+                    <option value="tasso">TASSO</option>
+                    <option value="tata">TATA</option>
+                    <option value="tatra">TATRA</option>
+                    <option value="tavria">TAVRIA</option>
+                    <option value="tazzari">TAZZARI</option>
+                    <option value="tesla">TESLA</option>
+                    <option value="think">THINK</option>
+                    <option value="toyota">TOYOTA</option>
+                    <option value="trabant">TRABANT</option>
+                    <option value="triumph">TRIUMPH</option>
+                    <option value="tvr">TVR</option>
+                    <option value="uaz">UAZ</option>
+                    <option value="umm">UMM</option>
+                    <option value="vauxhall">VAUXHALL</option>
+                    <option value="velorex">VELOREX</option>
+                    <option value="venturi">VENTURI</option>
+                    <option value="versenyauto">VERSENYAUTÓ</option>
+                    <option value="vespa">VESPA</option>
+                    <option value="volga">VOLGA</option>
+                    <option value="volkswagen">VOLKSWAGEN</option>
+                    <option value="volvo">VOLVO</option>
+                    <option value="w-motors">W MOTORS</option>
+                    <option value="waaijenberg">WAAIJENBERG</option>
+                    <option value="wanderer">WANDERER</option>
+                    <option value="warszawa">WARSZAWA</option>
+                    <option value="wartburg">WARTBURG</option>
+                    <option value="wheego">WHEEGO</option>
+                    <option value="wiesmann">WIESMANN</option>
+                    <option value="wolseley">WOLSELEY</option>
+                    <option value="yes">YES</option>
+                    <option value="yugo">YUGO</option>
+                    <option value="zaporozsec">ZAPOROZSEC</option>
+                    <option value="zastava">ZASTAVA</option>
+                    <option value="zaz">ZAZ</option>
+                    <option value="zhidou">ZHIDOU</option>
+                    <option value="zil">ZIL</option>
+                    <option value="zisz">ZISZ</option>
+                </select>
+            </p>
+            <p>
+                <label name="modelLabel" id="modelLabel">Modell: </label>
+                <input type="text" name="model" id="model" required/>
+            </p>
+            <p>
+                <label name="fuelLabel" id="fuelLabel">Üzemanyag: </label>
+                <select name="fuel" id="fuel" required>
+                    <option value="">Válasszon!</option>
+                    <option value="benzin">Benzin</option>
+                    <option value="dizel">Dízel</option>
+                    <option value="hibrid">Hibrid</option>
+                    <option value="benzin-elektromos">&nbsp;&nbsp;Benzin/elektromos</option>
+                    <option value="dizel-elektromos">&nbsp;&nbsp;Dízel/elektromos</option>
+                    <option value="benzin-gaz">Benzin/Gáz</option>
+                    <option value="LPG-benzin">&nbsp;&nbsp;LPG/benzin</option>
+                    <option value="CNG-benzin">&nbsp;&nbsp;CNG/benzin</option>
+                    <option value="dizel-gaz">Dízel/Gáz</option>
+                    <option value="LPG-dizel">&nbsp;&nbsp;LPG/dízel</option>
+                    <option value="CNG-dizel">&nbsp;&nbsp;CNG/dízel</option>
+                    <option value="elektromos">Elektromos</option>
+                    <option value="etanol">Etanol</option>
+                    <option value="biodizel">Biodízel</option>
+                    <option value="hidrogen-elektromos">Hidrogén/elektromos</option>
+                </select>
+            </p>
+            <p>
+                <label name="shifterLabel" id="shifterLabel">Sebessegváltó fajtája: </label>
+                <select name="shifter" id="shifter" required>
+                    <option value="">Válasszon!</option>
+                    <option value="A0">automata sebességváltó</option>
+                    <option value="A3">&nbsp;&nbsp;automata (3 fokozatú) sebességváltó</option>
+                    <option value="A4">&nbsp;&nbsp;automata (4 fokozatú) sebességváltó</option>
+                    <option value="A5">&nbsp;&nbsp;automata (5 fokozatú) sebességváltó</option>
+                    <option value="A6">&nbsp;&nbsp;automata (6 fokozatú) sebességváltó</option>
+                    <option value="A7">&nbsp;&nbsp;automata (7 fokozatú) sebességváltó</option>
+                    <option value="A8">&nbsp;&nbsp;automata (8 fokozatú) sebességváltó</option>
+                    <option value="A9">&nbsp;&nbsp;automata (9 fokozatú) sebességváltó</option>
+                    <option value="A10">&nbsp;&nbsp;automata (10 fokozatú) sebességváltó</option>
+                    <option value="F0">félautomata sebességváltó</option>
+                    <option value="V0">fokozatmentes automata sebességváltó</option>
+                    <option value="M0">manuális sebességváltó</option>
+                    <option value="M3">&nbsp;&nbsp;manuális (3 fokozatú) sebességváltó</option>
+                    <option value="M4">&nbsp;&nbsp;manuális (4 fokozatú) sebességváltó</option>
+                    <option value="M5">&nbsp;&nbsp;manuális (5 fokozatú) sebességváltó</option>
+                    <option value="M6">&nbsp;&nbsp;manuális (6 fokozatú) sebességváltó</option>
+                    <option value="M7">&nbsp;&nbsp;manuális (7 fokozatú) sebességváltó</option>
+                    <option value="S0">szekvenciális sebességváltó</option>
+                    <option value="S4">&nbsp;&nbsp;szekvenciális (4 fokozatú) sebességváltó
+                    </option>
+                    <option value="S5">&nbsp;&nbsp;szekvenciális (5 fokozatú) sebességváltó
+                    </option>
+                    <option value="S6">&nbsp;&nbsp;szekvenciális (6 fokozatú) sebességváltó
+                    </option>
+                    <option value="S7">&nbsp;&nbsp;szekvenciális (7 fokozatú) sebességváltó
+                    </option>
+                    <option value="S8">&nbsp;&nbsp;szekvenciális (8 fokozatú) sebességváltó
+                    </option>
+                    <option value="T0">tiptronic sebességváltó</option>
+                    <option value="T4">&nbsp;&nbsp;automata (4 fokozatú tiptronic) sebességváltó
+                    </option>
+                    <option value="T5">&nbsp;&nbsp;automata (5 fokozatú tiptronic) sebességváltó
+                    </option>
+                    <option value="T6">&nbsp;&nbsp;automata (6 fokozatú tiptronic) sebességváltó
+                    </option>
+                    <option value="T7">&nbsp;&nbsp;automata (7 fokozatú tiptronic) sebességváltó
+                    </option>
+                    <option value="T8">&nbsp;&nbsp;automata (8 fokozatú tiptronic) sebességváltó
+                    </option>
+                    <option value="T9">&nbsp;&nbsp;automata (9 fokozatú tiptronic) sebességváltó
+                    </option>
+                </select>
+            </p>
+            <p>
+                <label name="powerLabel" id="powerLabel">Hengerűrtartalom: </label>
+                <input type="text" name="power" id="power" required/>&nbsp;cm³
+            </p>
+            <p>
+                <label name="manufactDateLabel" id="manufactDateLabel">Gyártási dátum: </label>
+                <input type="date" name="manufactDate" id="manufactDate" required/>
+            </p>
+            <p>
+                <label name="milesLabel" id="milesLabel">Kilométeróra állása: </label>
+                <input type="text" name="miles" id="miles" value="" required>&nbsp;km
+            </p>
+            <p>
+                <label name="typeLabel" id="typeLabel">Kivitel: </label>
+                <select name="type" id="type" required>
+                    <option value="">Válasszon!</option>
+                    <option value="pickup">Pickup</option>
+                    <option value="terepjaro">Terepjáró</option>
+                    <option value="buggy">Buggy</option>
+                    <option value="cabrio">Cabrio</option>
+                    <option value="coupe">Coupe</option>
+                    <option value="egyteru">Egyterű</option>
+                    <option value="ferdehatu">Ferdehátú</option>
+                    <option value="hot-rod">Hot rod</option>
+                    <option value="kisbusz">Kisbusz</option>
+                    <option value="kombi">Kombi</option>
+                    <option value="lepcsoshatu">Lépcsőshátú</option>
+                    <option value="mopedauto">Mopedautó</option>
+                    <option value="sedan">Sedan</option>
+                    <option value="sport">Sport</option>
+                    <option value="crossover">Városi terepjáró (crossover)</option>
+                </select>
+            </p>
+            <p>
+                <label name="doorNrLabel" id="doorNrLabel">Ajtók száma: </label>
+                <select name="doorNr" id="doorNr" required>
+                    <option value="">---</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+            </p>
+            <p>
+                <label name="colorLabel" id="colorLabel">Autó színe: </label>
+                <select name="color" id="color" required>
+                    <option value="">Válasszon!</option>
+                    <option value="barna">barna</option>
+                    <option value="sotetbarna">&nbsp;&nbsp;sötétbarna</option>
+                    <option value="vilagosbarna">&nbsp;&nbsp;világosbarna</option>
+                    <option value="bezs">bézs</option>
+                    <option value="biborvoros">bíborvörös</option>
+                    <option value="bordo">bordó</option>
+                    <option value="ezust">ezüst</option>
+                    <option value="feher">fehér</option>
+                    <option value="tortfeher">&nbsp;&nbsp;törtfehér</option>
+                    <option value="fekete">fekete</option>
+                    <option value="homok">homok</option>
+                    <option value="ibolya">ibolya</option>
+                    <option value="kek">kék</option>
+                    <option value="ibolyakek">&nbsp;&nbsp;ibolyakék</option>
+                    <option value="oceankek">&nbsp;&nbsp;óceánkék</option>
+                    <option value="sotetkek">&nbsp;&nbsp;sötétkék</option>
+                    <option value="vilagoskek">&nbsp;&nbsp;világoskék</option>
+                    <option value="lila">lila</option>
+                    <option value="narancs">narancs</option>
+                    <option value="okker">okker</option>
+                    <option value="pezsgo">pezsgő</option>
+                    <option value="piros">piros</option>
+                    <option value="rozsaszin">rózsaszín</option>
+                    <option value="sarga">sárga</option>
+                    <option value="aranysarga">&nbsp;&nbsp;aranysárga</option>
+                    <option value="citromsarga">&nbsp;&nbsp;citromsárga</option>
+                    <option value="narancssarga">&nbsp;&nbsp;narancssárga</option>
+                    <option value="szurke">szürke</option>
+                    <option value="sotetszurke">&nbsp;&nbsp;sötétszürke</option>
+                    <option value="vilagosszurke">&nbsp;&nbsp;világosszürke</option>
+                    <option value="terep">terep</option>
+                    <option value="turkiz">türkiz</option>
+                    <option value="vajszinu">vajszínű</option>
+                    <option value="zold">zöld</option>
+                    <option value="olajzold">&nbsp;&nbsp;olajzöld</option>
+                    <option value="sotetzold">&nbsp;&nbsp;sötétzöld</option>
+                    <option value="vilagoszold">&nbsp;&nbsp;világoszöld</option>
+                </select></p>
+                <p>
+                    <label name="cityLabel" id="cityLabel">Város: </label>
+                    <input type="text" name="city" id="city" value="" required>
+                </p>
+                <p>
+                    <label name="priceLabel" id="priceLabel">Az autó ára:</label>
+                    <input type="text" name="price" id="price" value="" required>&nbsp;&euro;
+                </p>
+                <p>
+                    <label name="uploadTimeLabel" id="uploadTimeLabel">Feltöltés dátuma: </label>
+                    <input type="date" name="uploadTime" id="uploadTime" required>
+                </p>
+            <p><input type="submit" id="submitBtn" value="Leadom"/></p>
+        </form>
+    </article>
+    <footer>
+        Készítette &copy; Ferent Edina feim1316 info+
+    </footer>
+</body>
+
+</html>

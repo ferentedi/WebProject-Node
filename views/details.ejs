@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="utf-8">
+    <title>Részletek</title>
+    <link rel="stylesheet" type="text/css" href="/style.css">
+    <script src="/index.js"></script>
+</head>
+<header>
+    <%- include("./partials/navbar.ejs", { loggedInUserName: loggedInUserName }) %>
+</header>
+
+<body>
+    <% if (listing) { %>
+    <div>
+        <div id="picture-container">
+            <% if (listing.id && listing.picture){ %>
+            <img src="/uploads/<%= listing.picture.src %>" alt="Kep" class="image" width="250px">
+            <% if (loggedInUserId === listing.userId){ %>
+            <button onclick="deletePicture(<%= listing.picture.id %>, <%= listing.id %>)">
+                Delete
+            </button>
+            <br><br>
+            <% } %>
+            <% } else { %>
+            <div>Nincs kép</div>
+            <% } %>
+        </div>
+        <div id="message-container"></div>
+        <div id="listing-table-container">
+            <table class="center">
+                <tr>
+                    <th>Id</th>
+                    <th>Make</th>
+                    <th>Model</th>
+                    <th>Fuel</th>
+                    <th>Shifter</th>
+                    <th>Power</th>
+                    <th>ManufactDate</th>
+                    <th>Miles</th>
+                    <th>Type</th>
+                    <th>DoorNr</th>
+                    <th>Color</th>
+                    <th>City</th>
+                    <th>Price</th>
+                    <th>Uploaded at</th>
+                    <th>Updated at</th>
+                </tr>
+                <tr>
+                    <td><%= listing.id %></td>
+                    <td><%= listing.make %></td>
+                    <td><%= listing.model %></td>
+                    <td><%= listing.fuel %></td>
+                    <td><%= listing.shifter %></td>
+                    <td><%= listing.power %></td>
+                    <td><%= listing.manufactDate %></td>
+                    <td><%= listing.miles %></td>
+                    <td><%= listing.type %></td>
+                    <td><%= listing.doorNr %></td>
+                    <td><%= listing.color %></td>
+                    <td><%= listing.city %></td>
+                    <td><%= listing.price %></td>
+                    <td><%= listing.createdAt %></td>
+                    <td><%= listing.updatedAt %></td>
+                </tr>
+            </table>
+        </div>
+        <h1>Kép feltöltése</h1>
+        <article class="flexbox">
+            <form method="post" enctype="multipart/form-data" action="/routes/pictures/<%= listing.id %>">
+                <p>
+                    <label name="imgLabel" id="imgLabel">Válassza ki a képet:</label>
+                    <input type="file" id="img" name="img" accept="image/*" required>
+                </p>
+                <p><input type="submit" value="Feltöltöm" /></p>
+            </form>
+        </article>
+    </div>
+    <% } %>
+    <footer>
+        Készítette &copy; Ferent Edina feim1316 info+
+    </footer>
+</body>
+
+</html>

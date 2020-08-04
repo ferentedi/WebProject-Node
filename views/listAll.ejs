@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Hirdetesek</title>
+    <link rel="stylesheet" type="text/css" href="/style.css">
+    <script src="/index.js"></script>
+</head>
+<header>
+    <%- include("./partials/navbar.ejs", { loggedInUserName: loggedInUserName }) %>
+</header>
+
+<body>
+    <h1>Hírdetés keresés</h1>
+    <article class="flexbox">
+        <form method="post" action="/routes/listings/find">
+            <p>
+                <% if (carMakeData) { %>
+                <label name="makeLabel" id="makeLabel">Autó márkája:</label>
+                <select name="make" id="make" required>
+                    <% carMakeData.forEach(d => { %>
+                    <option name=" <%= d.name %> "> <%= d.value %> </option>
+                    <% }) %>
+                </select>
+                <% } %>
+            </p>
+            <p>
+                <label name="cityLabel" id="cityLabel">Város: </label>
+                <input type="text" name="city" id="city" value="" required>
+            </p>
+            <p>
+                <label name="minPriceLabel" id="minPriceLabel">Minimum ár:</label>
+                <input type="number" name="minPrice" id="minPrice" value="" required>&nbsp;&euro;
+            </p>
+
+            <p>
+                <label name="maxPriceLabel" id="maxPriceLabel">Maximum ár:</label>
+                <input type="number" name="maxPrice" id="maxPrice" value="" required>&nbsp;&euro;
+            </p>
+            <p><input type="submit" value="Keres" />
+            </p>
+        </form>
+    </article>
+    <h1>Hírdetések</h1>
+    <table class="center">
+        <tr>
+            <th>Id</th>
+            <th>Make</th>
+            <th>Model</th>
+            <th>ManufactDate</th>
+            <th>Miles</th>
+            <th>Type</th>
+            <th>DoorNr</th>
+            <th>Color</th>
+            <th>City</th>
+            <th>Price</th>
+            <th>Img</th>
+            <th>Details</th>
+        </tr>
+
+        <% listings.forEach(function(listing) { %>
+        <tr onclick="getCarDetails(<%= listing.id %>)">
+            <td><%= listing.id %></td>
+            <td><%= listing.make %></td>
+            <td><%= listing.model %></td>
+            <td><%= listing.manufactDate %></td>
+            <td><%= listing.miles %></td>
+            <td><%= listing.type %></td>
+            <td><%= listing.doorNr %></td>
+            <td><%= listing.color %></td>
+            <td><%= listing.city %></td>
+            <td><%= listing.price %></td>
+            <% if (listing.pictureId != null){ %>
+            <td><%= listing.pictureId %></td>
+            <% }  else { %>
+            <td></td>
+            <% } %>
+            <td>
+                <button>
+                    <a href="/routes/details/<%= listing.id %>">Részletek</a>
+                </button>
+            </td>
+        </tr>
+        <tr id="details-container-<%= listing.id %>"></tr>
+        <% }); %>
+    </table>
+    <div id="message-container"></div>
+    <br />
+    <button>
+        <a href="/routes/listings">Új hírdetés hozzáadása</a>
+    </button>
+</body>
+
+</html>

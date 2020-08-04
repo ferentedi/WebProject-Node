@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Sign up</title>
+    <link rel="stylesheet" type="text/css" href="/style.css">
+</head>
+
+<body>
+    <article class="flexbox">
+        <form id="signup-form" method="post" action="/routes/signup">
+            <p>
+                <label for="email">Email</label>
+                <input type="text" id="email" name="email" required />
+            </p>
+            <p>
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required />
+            </p>
+            <p>
+                <label for="fullname">Full name</label>
+                <input type="text" id="fullname" name="fullname" required />
+            </p>
+            <p>
+                <label for="birthdate">Birth date</label>
+                <input type="text" id="birthdate" name="birthdate" required />
+            </p>
+
+            <button type="submit">Sign up!</button>
+
+        </form>
+    </article>
+</body>
+
+</html>
