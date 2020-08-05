@@ -1,12 +1,12 @@
-# Webprogramozás laborfeladatok
-**Adatbazis elkeszitese**  
-Az adatbazis elkeszitese a [userkeszites](userkeszites.sql) fajl futtatasaval lehetseges.  
+# Node project
+**Database creation**  
+For creating the database you will need to run the [userkeszites](userkeszites.sql) file.  
 
 
-**Userek beszurasa tablaba**  
-A belepeshez:  
-az [adminkeszites](adminkeszites.sql) fajl futtatasaval ket user jon letre a tablakban,  
-egyik az admin masik a user, mindekettonek ugyanaz a jelszava.  
+**Creating new users in the database**  
+To sign in:  
+run the [adminkeszites](adminkeszites.sql) file, this will create two users in the database,  
+one being admin and the other one user.  
 
 
 | user   | password |  
@@ -16,25 +16,25 @@ egyik az admin masik a user, mindekettonek ugyanaz a jelszava.
 
 
 
-**Dummy adatok**  
-Az adatbazist a [hirdeteskeszites](hirdeteskeszites.sql) fajlal lehet feltolteni egy par dummy adattal.  
+**Dummy data**  
+You can load some dummy data in the database by running the [hirdeteskeszites](hirdeteskeszites.sql) file.  
 
 
 
-**Uj user letrehozasa/ sign up**  
-A signup endpointon lehet uj usereket kesziteni, de ezeknek **nem** lesz admin joguk.  
+**Sign up**  
+On the signup endpoint you can create new users, these users **won't** have admin roles.  
 
 
 
-**Jogok**  
-Az adminnak minden endpointhoz joga van, a usernek csak a kereses endpointhoz.  
-Az endpointok amelyeket mindeki lathat: login/signup.  
+**Roles**
+The admin can access all endpoints, the simple user may access only the search endpoint.
+The login and signup endpoint can be seen by anybody.  
 
 
 | user   | permissions    |  
 | ------ | -------------- |  
 | admin  | all            |  
-| user   | /kereses       |  
+| user   | /search        |  
 | guest  | /login, /signup|
 
 
