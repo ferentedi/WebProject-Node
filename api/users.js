@@ -6,7 +6,7 @@ const macros = require('../utils/macros');
 
 const router = express.Router();
 
-// lekeri az osszes felhasznalot
+// get all the users
 router.get('/', async (req, res) => {
   const users = await userDao.findAllUsers();
   if (users) {
@@ -16,7 +16,7 @@ router.get('/', async (req, res) => {
   }
 });
 
-// keszit egy uj felhasznalot
+// create a new user
 router.post('/', async (req, res) => {
   const {
     email, password, fullname, birthdate,
@@ -37,7 +37,7 @@ router.post('/', async (req, res) => {
   }
 });
 
-// torli az adott id-ju felhasznalot
+// delete user with given id
 router.delete('/:id', async (req, res) => {
   const { id } = req.params;
   const userData = await userDao.findUser({ where: { id } });
@@ -49,7 +49,7 @@ router.delete('/:id', async (req, res) => {
   }
 });
 
-// frissiti az adott felhasznalot
+// update user with given id
 router.patch('/:id', async (req, res) => {
   const { id } = req.params;
   const { newEmail } = req.body;
@@ -62,7 +62,7 @@ router.patch('/:id', async (req, res) => {
   }
 });
 
-// megkeresi az adott id-ju felhasznalot
+// search for user with given id
 router.get('/:id', async (req, res) => {
   const { id } = req.params;
   const userData = await userDao.findUser({ where: { id } });
@@ -73,7 +73,7 @@ router.get('/:id', async (req, res) => {
   }
 });
 
-// megkeresi az adott id-ju felhasznalo hirdeteseit
+// search for the listings of the user with given id
 router.get('/:id/listings', async (req, res) => {
   const { id } = req.params;
   const usersListings = await listingsDao.findAllListings({ where: { userId: id } });

@@ -1,16 +1,16 @@
 const db = require('../models');
 
-// megtalalja az osszes felhasznalot
+// find all users
 exports.findAllUsers = (params) => db.users.findAll(params);
 
-// keszit egy uj felhasznalot
+// create new user
 exports.createUser = (values) => db.users.create(values);
 
-// megkeres egy felhasznalot id alapjan
+// search for user with given id
 exports.findUser = (values) => db.users.findOne(values);
 
-// megkeres egy felhasznalot email alapjan
+// find user by email
 exports.findUserByEmail = (params) => db.users.findOne(params);
 
-// frissit egy felhasznalot
+// update user
 exports.updateUser = (values, option) => db.users.update(values, option);

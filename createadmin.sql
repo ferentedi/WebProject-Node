@@ -1,4 +1,4 @@
-INSERT INTO `autokereskedes`.`users`
+INSERT INTO `cardealership`.`users`
 (
 `fullname`,
 `email`,

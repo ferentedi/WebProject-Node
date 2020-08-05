@@ -24,10 +24,10 @@ app.use(express.json());
 app.use(upload());
 app.use(cookieParser());
 
-// mount-oljuk az api-t
+// mount the api
 app.use('/api', require('./api'));
 
-// mount-oljuk a routes-ot
+// mount the other routes
 app.use('/routes', require('./routes'));
 
 app.use(errorMiddleware);

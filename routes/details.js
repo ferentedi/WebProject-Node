@@ -9,7 +9,7 @@ const macros = require('../utils/macros');
 const authenticationMiddleware = require('../middlewares/authenticationMiddleware');
 const authorizationMiddleware = require('../middlewares/authorizationMiddleware');
 
-// csak admin
+// only admin role can access this endpoint
 router.get('/:id', [authenticationMiddleware(),
   authorizationMiddleware([macros.ADMIN_ROLE])], async (req, res) => {
   const { id } = req.params;

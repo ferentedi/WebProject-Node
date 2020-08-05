@@ -14,7 +14,7 @@ const macros = require('../utils/macros');
 const authenticationMiddleware = require('../middlewares/authenticationMiddleware');
 const authorizationMiddleware = require('../middlewares/authorizationMiddleware');
 
-// csak admin
+// admin only
 // read
 router.get('/', [authenticationMiddleware(),
   authorizationMiddleware([macros.ADMIN_ROLE])], (req, res) => {
@@ -23,7 +23,7 @@ router.get('/', [authenticationMiddleware(),
   res.render('newListing', { carMakeData, loggedInUserName, loggedInUserId });
 });
 
-// csak admin
+// admin only
 // create
 router.post('/', [authenticationMiddleware(),
   authorizationMiddleware([macros.ADMIN_ROLE])], async (req, res) => {
@@ -66,8 +66,8 @@ router.post('/', [authenticationMiddleware(),
   });
 });
 
-// minden bejelentkezett user lathatja ezt az endpointot
-// megadott kriteriumok alapjan keres
+// every logged in user can see this endpoint
+// searches with given criteria
 router.post('/find', [authenticationMiddleware(),
   authorizationMiddleware([macros.ADMIN_ROLE, macros.USER_ROLE])], async (req, res) => {
   const {

@@ -6,7 +6,7 @@ const router = express.Router();
 const utils = require('../utils/utils');
 const macros = require('../utils/macros');
 
-// tudjunk regisztralni
+// creates a new user with "user" role
 router.get('/', async (req, res) => {
   res.render('signup');
 });

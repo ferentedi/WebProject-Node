@@ -26,7 +26,7 @@ const getCarDetails = (listingId) => {
 };
 
 const listingDetails = () => `
-  <div>Nincs kep.</div>
+  <div>No picture.</div>
   `;
 
 // eslint-disable-next-line no-unused-vars

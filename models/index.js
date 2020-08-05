@@ -34,7 +34,7 @@ db.Sequelize = Sequelize;
 
 module.exports = db;
 
-// tablak osszekotese
+// relations between tables
 db.users.hasMany(db.listings);
 db.listings.belongsTo(db.pictures);
 db.listings.belongsTo(db.users);

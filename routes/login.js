@@ -10,13 +10,13 @@ const carMakeData = require('../data/carMakeData');
 const utils = require('../utils/utils');
 const macros = require('../utils/macros');
 
-// ezentul ez a main page
+// this is the main page endpoint
 router.get('/', (req, res) => {
   res.render('login');
 });
 
-// belépés
-// ha sikerult belepni, akkor kiirja a listat
+// login
+// if successful then display the list of listings from database
 router.post('/', async (req, res) => {
   const { email, password } = req.body;
   if (email && password) {

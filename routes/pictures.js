@@ -10,7 +10,7 @@ const macros = require('../utils/macros');
 const authenticationMiddleware = require('../middlewares/authenticationMiddleware');
 const authorizationMiddleware = require('../middlewares/authorizationMiddleware');
 
-// csak admin
+// admin only
 router.post('/:id', [authenticationMiddleware(),
   authorizationMiddleware([macros.ADMIN_ROLE])], async (req, res) => {
   const { id } = req.params;

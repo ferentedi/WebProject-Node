@@ -8,7 +8,7 @@ const macros = require('../utils/macros');
 const authenticationMiddleware = require('../middlewares/authenticationMiddleware');
 const authorizationMiddleware = require('../middlewares/authorizationMiddleware');
 
-// egy bejegyzest terit vissza
+// returns a listing
 router.get('/:id', [authenticationMiddleware(),
   authorizationMiddleware([macros.ADMIN_ROLE, macros.USER_ROLE])], async (req, res) => {
   const itemToFindId = req.params.id;

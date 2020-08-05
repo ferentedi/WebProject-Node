@@ -9,30 +9,30 @@ const macros = require('../utils/macros');
 const authenticationMiddleware = require('../middlewares/authenticationMiddleware');
 const authorizationMiddleware = require('../middlewares/authorizationMiddleware');
 
-// ki kell toroljon egy kepet az adott listingbol
+// delete a picture from a listing
 router.delete('/:id', [authenticationMiddleware(),
   authorizationMiddleware([macros.ADMIN_ROLE, macros.USER_ROLE])], async (req, res) => {
   const pictureId = req.params.id;
-  // kikeresem az adott kepet az adatbazisbol
+  // look for the picture in the database
   const foundPicture = await pictureDao.findPicture({
     where: { id: pictureId },
   });
-  // ha van ilyen id-ju kep
+  // if there is a picture with this id
   if (foundPicture) {
-    // megkeresem a listing-et amihez tartozik
+    // search for the listing that it belongs to
     const listing = await listingsDao.findListing({
       where: { pictureId: foundPicture.id },
     });
-    // ha van olyan listing amihez ez a kep tartozik
+    // if there is such a listing
     if (listing) {
-      // ha a bejelentkezett user a tulajdonosa a listing-nek
+      // if the logged in user is the creator of given listing
       const loggedInUserId = res.locals.userId;
       if (loggedInUserId === listing.userId) {
         foundPicture.destroy();
       } else {
         res.status(403).json({ error: 'You do not have authorization to delete this photo.' });
       }
-      // updateolom a listinget
+      // update the listing
       try {
         await listingsDao.updateListing({ pictureId: null }, { where: { id: listing.id } });
         res.status(204);

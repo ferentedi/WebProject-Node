@@ -1,7 +1,7 @@
--- készít egy adatbázist
-CREATE DATABASE IF NOT EXISTS autokereskedes;
+-- creates the database
+CREATE DATABASE IF NOT EXISTS cardealership;
 
---hozzaad egy usert
-USE autokereskedes;
+--creates a user for it
+USE cardealership;
 CREATE USER 'webprog'@'localhost' IDENTIFIED BY 'password';
 GRANT ALL PRIVILEGES ON *.* TO 'webprog'@'localhost';

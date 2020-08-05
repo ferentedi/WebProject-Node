@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="hu">
+<html lang="en">
 
 <head>
     <meta charset="utf-8">
-    <title>Részletek</title>
+    <title>Details</title>
     <link rel="stylesheet" type="text/css" href="/style.css">
     <script src="/index.js"></script>
 </head>
@@ -24,7 +24,7 @@
             <br><br>
             <% } %>
             <% } else { %>
-            <div>Nincs kép</div>
+            <div>No picture to show</div>
             <% } %>
         </div>
         <div id="message-container"></div>
@@ -66,20 +66,20 @@
                 </tr>
             </table>
         </div>
-        <h1>Kép feltöltése</h1>
+        <h1>Upload picture</h1>
         <article class="flexbox">
             <form method="post" enctype="multipart/form-data" action="/routes/pictures/<%= listing.id %>">
                 <p>
-                    <label name="imgLabel" id="imgLabel">Válassza ki a képet:</label>
+                    <label name="imgLabel" id="imgLabel">Choose picture:</label>
                     <input type="file" id="img" name="img" accept="image/*" required>
                 </p>
-                <p><input type="submit" value="Feltöltöm" /></p>
+                <p><input type="submit" value="Upload" /></p>
             </form>
         </article>
     </div>
     <% } %>
     <footer>
-        Készítette &copy; Ferent Edina feim1316 info+
+        Created by &copy; Ferent Edina
     </footer>
 </body>
 

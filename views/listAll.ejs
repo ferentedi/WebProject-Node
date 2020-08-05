@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Hirdetesek</title>
+    <title>Listings</title>
     <link rel="stylesheet" type="text/css" href="/style.css">
     <script src="/index.js"></script>
 </head>
@@ -12,12 +12,12 @@
 </header>
 
 <body>
-    <h1>Hírdetés keresés</h1>
+    <h1>Search</h1>
     <article class="flexbox">
         <form method="post" action="/routes/listings/find">
             <p>
                 <% if (carMakeData) { %>
-                <label name="makeLabel" id="makeLabel">Autó márkája:</label>
+                <label name="makeLabel" id="makeLabel">Car make:</label>
                 <select name="make" id="make" required>
                     <% carMakeData.forEach(d => { %>
                     <option name=" <%= d.name %> "> <%= d.value %> </option>
@@ -26,23 +26,23 @@
                 <% } %>
             </p>
             <p>
-                <label name="cityLabel" id="cityLabel">Város: </label>
+                <label name="cityLabel" id="cityLabel">City: </label>
                 <input type="text" name="city" id="city" value="" required>
             </p>
             <p>
-                <label name="minPriceLabel" id="minPriceLabel">Minimum ár:</label>
+                <label name="minPriceLabel" id="minPriceLabel">Minimum price:</label>
                 <input type="number" name="minPrice" id="minPrice" value="" required>&nbsp;&euro;
             </p>
 
             <p>
-                <label name="maxPriceLabel" id="maxPriceLabel">Maximum ár:</label>
+                <label name="maxPriceLabel" id="maxPriceLabel">Maximum price:</label>
                 <input type="number" name="maxPrice" id="maxPrice" value="" required>&nbsp;&euro;
             </p>
-            <p><input type="submit" value="Keres" />
+            <p><input type="submit" value="Search" />
             </p>
         </form>
     </article>
-    <h1>Hírdetések</h1>
+    <h1>Listings</h1>
     <table class="center">
         <tr>
             <th>Id</th>
@@ -78,7 +78,7 @@
             <% } %>
             <td>
                 <button>
-                    <a href="/routes/details/<%= listing.id %>">Részletek</a>
+                    <a href="/routes/details/<%= listing.id %>">Details</a>
                 </button>
             </td>
         </tr>
@@ -88,7 +88,7 @@
     <div id="message-container"></div>
     <br />
     <button>
-        <a href="/routes/listings">Új hírdetés hozzáadása</a>
+        <a href="/routes/listings">Create new listing</a>
     </button>
 </body>
 
