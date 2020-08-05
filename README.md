@@ -23,7 +23,7 @@ You can load some dummy data in the database by running the [dummydata](dummydat
 On the signup endpoint you can create new users, these users **won't** have admin roles.  
 
 
-**Roles**
+**Roles**   
 Only the admin can access all endpoints.
 The login and signup endpoints can be seen by anybody. 
 
